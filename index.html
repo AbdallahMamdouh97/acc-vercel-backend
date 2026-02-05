@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACC Issue Exporter API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .test-area { background: #f5f5f5; padding: 20px; border-radius: 10px; }
+        button { background: #0070f3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0051cc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ ACC Issue Exporter API</h1>
+        <p>Your API is running successfully!</p>
+
+        <div class="test-area">
+            <h3>Test Endpoint:</h3>
+            <p>POST <code>/api/export</code></p>
+
+            <h4>Test with curl:</h4>
+            <pre>
+curl -X POST https://your-project.vercel.app/api/export \
+  -H "Content-Type: application/json" \
+  -d '{"refresh_token":"your_token","project_name":"0000 - ACC Learning Hub"}'
+            </pre>
+
+            <h4>Or test in browser console:</h4>
+            <pre>
+fetch('/api/export', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    refresh_token: 'test',
+    project_name: '0000 - ACC Learning Hub'
+  })
+}).then(r => r.json()).then(console.log)
+            </pre>
+        </div>
+
+        <p><strong>For Chrome extension:</strong> Use URL: <code>https://your-project.vercel.app/api/export</code></p>
+    </div>
+</body>
+</html>
